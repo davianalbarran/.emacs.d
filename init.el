@@ -45,3 +45,7 @@
   (require 'dap-cpptools)
   (yas-global-mode)
   (setq lsp-modeline-diagnostics-scope :workspace))
+
+(setq org-log-done 'note)
+
+
