@@ -48,4 +48,4 @@
 
 (setq org-log-done 'note)
 
-
+(add-to-list 'org-agenda-files "~/Desktop/todo.org")
