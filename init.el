@@ -50,6 +50,8 @@
 
 (setq org-log-done 'note)
 
+(add-to-list 'org-agenda-files "~/Desktop/todo.org")
+
 (keymap-global-set "C-z" 'shell)
 (keymap-global-set "C-c C-t" 'org-agenda)
 
