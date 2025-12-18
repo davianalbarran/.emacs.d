@@ -50,7 +50,7 @@
 
 (setq org-log-done 'note)
 
-(setq org-agenda-files "~/Desktop/todo.org")
+(setq org-agenda-files "~/.emacs.d/agenda.org")
 
 ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,7 +58,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("7f0f6f6f8ca1b451a1fbb5a27c3fb904b939ea26fbecbf17caa4b64d67ffeea1"
-     default)))
+     default))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
