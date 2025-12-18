@@ -50,7 +50,11 @@
 
 (setq org-log-done 'note)
 
-(setq org-agenda-files "~/.emacs.d/agenda.org")
+(setq org-directory "~/.emacs.d")
+
+(setq org-agenda-files (concat org-directory "/agenda.org"))
+
+(setq org-default-notes-file "~/Desktop/todo.org")
 
 ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
