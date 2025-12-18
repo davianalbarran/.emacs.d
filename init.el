@@ -50,7 +50,11 @@
 
 (setq org-log-done 'note)
 
-(add-to-list 'org-agenda-files "~/Desktop/todo.org")
+(setq org-directory "~/.emacs.d")
+
+(setq org-agenda-files (concat org-directory "/agenda.org"))
+
+(setq org-default-notes-file "~/Desktop/todo.org")
 
 (keymap-global-set "C-z" 'shell)
 (keymap-global-set "C-c C-t" 'org-agenda)
