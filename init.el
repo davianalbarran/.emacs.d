@@ -50,20 +50,16 @@
 
 (setq org-log-done 'note)
 
-<<<<<<< Updated upstream
-
-=======
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("7f0f6f6f8ca1b451a1fbb5a27c3fb904b939ea26fbecbf17caa4b64d67ffeea1"
-     default)))
+     default))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
->>>>>>> Stashed changes
