@@ -59,7 +59,11 @@
 (keymap-global-set "C-z" 'shell)
 (keymap-global-set "C-c C-t" 'org-agenda)
 
- ;; custom-set-variables was added by Custom.
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+datetree org-default-notes-file)
+         "* TODO %?\n SCHEDULED %^T" :time-prompt t)))
+
+;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
