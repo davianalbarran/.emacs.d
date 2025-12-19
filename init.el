@@ -50,6 +50,9 @@
 
 (setq org-log-done 'note)
 
+(keymap-global-set "C-z" 'shell)
+(keymap-global-set "C-c C-t" 'org-agenda)
+
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
