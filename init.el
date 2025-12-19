@@ -28,6 +28,19 @@
 (use-package company-box
   :hook (company-mode . company-box-mode))
 
+(use-package dap-mode
+  :after lsp-mode
+  :commands dap-debug
+  :hook ((python-mode . dap-ui-mode) (python-mode . dap-mode))
+  :config
+  (require 'dap-python)
+  (setq dap-python-debugger 'debugpy)
+  (defun dap-python--pyenv-executable-find (command)
+    (with-venv (executable-find "python")))
+
+  (add-hook 'dap-stopped-hook
+            (lambda (arg) (call-interactively #'dap-hydra))))
+
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
 
 (helm-mode)
@@ -51,6 +64,7 @@
   (require 'dap-cpptools)
   (yas-global-mode)
   (setq lsp-modeline-diagnostics-scope :workspace))
+  (setq lsp-modeline-code-actions-segments '(name icon))
 
 (setq org-log-done 'note)
 
