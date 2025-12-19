@@ -57,8 +57,14 @@
 (setq org-default-notes-file "~/Desktop/todo.org")
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+datetree org-default-notes-file)
-         "* TODO %?\n SCHEDULED %^T" :time-prompt t)))
+      '(("t" "New Todo" entry (file+datetree org-default-notes-file)
+         "* TODO %?\n SCHEDULED %^T" :time-prompt t)
+	("a" "New Appointment" entry (file+olp org-default-notes-file "Floating tasks:")
+         "* %?\n SCHEDULED %^T" :time-prompt t)
+	("d" "New Deadline" entry (file+olp org-default-notes-file "Floating tasks:")
+         "* TODO %?\n DEADLINE %^T" :time-prompt t)
+	("f" "New Floating Task" entry (file+olp org-default-notes-file "Floating tasks:")
+         "* TODO %?\n")))
 
 ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
