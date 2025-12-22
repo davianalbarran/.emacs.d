@@ -17,7 +17,7 @@
 (add-to-list 'exec-path' "~/.nvm/versions/node/v24.12.0/bin/")
 
 (setq package-selected-packages '(lsp-mode lsp-ui yasnippet lsp-treemacs helm-lsp
-    projectile hydra flycheck company avy which-key helm-xref dap-mode multiple-cursors))
+    projectile hydra flycheck company company-box avy which-key helm-xref dap-mode multiple-cursors))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
@@ -38,6 +38,10 @@
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
 (add-hook 'csharp-mode-hook 'lsp)
+
+(setq display-line-numbers-type 'relative)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
 
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0)
