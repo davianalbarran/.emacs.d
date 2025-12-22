@@ -40,6 +40,10 @@
 (add-hook 'csharp-mode-hook 'lsp)
 (add-hook 'zig-mode-hook 'lsp)
 
+(setq display-line-numbers-type 'relative)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
+
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0)
 
